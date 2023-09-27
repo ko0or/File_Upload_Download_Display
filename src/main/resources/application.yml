@@ -1,0 +1,20 @@
+# 업로드 파일 용량 제한 -> 파일 개별
+# spring.servlet.multipart.max-file-size=5MB
+# 업로드 파일 용량 제한 -> 파일 전체
+# spring.servlet.multipart.max-request-size=10MB
+
+# 저장경로
+file:
+  save-directory: C:/SPRINGBOOT_FILE_UPLOAD
+
+# 업로드 용량 제한 -> 파일 개별(max-file-size: 5MB) & 모두 합쳐서(max-request-size: 10MB) 까지로 제한
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+# 디버깅 설정
+logging:
+  level:
+    com.example.file_upload_download_display: debug
